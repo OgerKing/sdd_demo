@@ -1,0 +1,61 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - heading "SQL Primer" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Learn SELECT queries against membership sample data
+  - main [ref=e7]:
+    - complementary [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: Schema
+          - generic [ref=e12]: Tables and columns available for queries
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - paragraph [ref=e15]: members
+            - list [ref=e16]:
+              - listitem [ref=e17]: id
+              - listitem [ref=e18]: email
+              - listitem [ref=e19]: full_name
+              - listitem [ref=e20]: joined_at
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: memberships
+            - list [ref=e23]:
+              - listitem [ref=e24]: id
+              - listitem [ref=e25]: member_id
+              - listitem [ref=e26]: plan_name
+              - listitem [ref=e27]: status
+              - listitem [ref=e28]: expires_at
+          - generic [ref=e29]:
+            - paragraph [ref=e30]: products
+            - list [ref=e31]:
+              - listitem [ref=e32]: id
+              - listitem [ref=e33]: name
+              - listitem [ref=e34]: price_cents
+              - listitem [ref=e35]: is_member_only
+          - generic [ref=e36]:
+            - paragraph [ref=e37]: orders
+            - list [ref=e38]:
+              - listitem [ref=e39]: id
+              - listitem [ref=e40]: member_id
+              - listitem [ref=e41]: product_id
+              - listitem [ref=e42]: ordered_at
+              - listitem [ref=e43]: total_cents
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]: Query Editor
+          - generic [ref=e48]: SELECT-only queries. Mutating statements are blocked.
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51] [cursor=pointer]: Members (5 rows)
+            - generic [ref=e52] [cursor=pointer]: Members + memberships JOIN
+            - generic [ref=e53] [cursor=pointer]: Member-only products
+          - generic [ref=e54]:
+            - textbox "SELECT * FROM members LIMIT 5;" [ref=e55]: DROP TABLE members
+            - generic [ref=e56]:
+              - paragraph [ref=e57]: Ctrl+Enter to run
+              - button "Run" [active] [ref=e58] [cursor=pointer]
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: Results
+          - generic [ref=e62]: Query failed
+        - generic [ref=e65]: Only SELECT queries are allowed. Your query must start with SELECT.

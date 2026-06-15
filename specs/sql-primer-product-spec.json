@@ -1,0 +1,36 @@
+{
+  "id": "spec-sql-primer-001",
+  "name": "SQL Primer Playground",
+  "summary": "Browser-based SQL playground with seeded membership sample data for learning SELECT, JOIN, and aggregation.",
+  "scope": [
+    "Supabase PostgreSQL with pre-seeded tables: members, memberships, products, orders",
+    "Read-only query execution via Supabase RPC run_readonly_query(sql text)",
+    "Query editor with Run button and results rendered in shadcn Table",
+    "Schema browser listing all 4 tables and their column names",
+    "Client-side SELECT-only guard as backup to server-side validation",
+    "Three starter example queries as clickable Badge chips",
+    "Row count displayed in results footer"
+  ],
+  "nonGoals": [
+    "No custom CSS files — Tailwind utility classes only",
+    "No auth or user accounts",
+    "No multi-statement scripts or DDL from the editor",
+    "No pixel-perfect design during Cursor build — Lovable owns beautification",
+    "No production hardening or rate limiting"
+  ],
+  "constraints": [
+    "Vite + React 18 + TypeScript + Tailwind CSS + shadcn/ui + React Router",
+    "Supabase PostgreSQL backend with anon key",
+    "Lovable-compatible layout: src/pages/, src/components/ui/, src/integrations/supabase/",
+    "SELECT-only queries enforced client-side and in Postgres RPC",
+    "Migrations pre-deployed — agent wires client only, does not recreate DB",
+    "snake_case SQL identifiers for all table and column names"
+  ],
+  "acceptanceCriteria": [
+    "App loads with schema browser showing all 4 tables and column names",
+    "SELECT * FROM members LIMIT 5 returns 5 rows in under 2 seconds",
+    "A JOIN query across members and memberships returns correct rows",
+    "DROP TABLE members shows a friendly error and schema remains unchanged",
+    "Example query chips populate the editor and run successfully"
+  ]
+}
